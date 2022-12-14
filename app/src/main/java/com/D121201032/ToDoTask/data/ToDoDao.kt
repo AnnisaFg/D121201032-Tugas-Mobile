@@ -29,7 +29,7 @@ interface ToDoDao {
         "SELECT * FROM todo_table ORDER BY CASE " +
                 "WHEN priority LIKE 'H%' THEN 1 " +
                 "WHEN priority LIKE 'M%' THEN 2 " +
-                "WHEN priority LIKE 'M%' THEN 3 " +
+                "WHEN priority LIKE 'N%' THEN 3 " +
                 "WHEN priority LIKE 'L%' THEN 4 END"
     )
     fun sortByHighPriority(): LiveData<List<ToDoData>>
@@ -38,7 +38,7 @@ interface ToDoDao {
         "SELECT * FROM todo_table ORDER BY CASE " +
                 "WHEN priority LIKE 'L%' THEN 1 " +
                 "WHEN priority LIKE 'M%' THEN 2 " +
-                "WHEN priority LIKE 'M%' THEN 3 " +
+                "WHEN priority LIKE 'N%' THEN 3 " +
                 "WHEN priority LIKE 'H%' THEN 4 END"
     )
     fun sortByLowPriority(): LiveData<List<ToDoData>>
